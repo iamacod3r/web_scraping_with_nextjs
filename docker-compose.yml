@@ -1,0 +1,29 @@
+services:
+  web_scraping:
+    build:
+      context: .
+      dockerfile: Dockerfile.web_scraping
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/web_scraping_db
+      - NODE_ENV=production
+      - BRIGHT_DATA_USERNAME={_update_here_}
+      - BRIGHT_DATA_PASSWORD={_update_here_}
+      - BRIGHT_DATA_HOSTNAME={_update_here_}
+      - BRIGHT_DATA_PORT={_update_here_}
+    depends_on:
+      - mongodb
+    volumes:
+      - ./public:/app/public
+      - ./.next/static:/app/.next/static
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
