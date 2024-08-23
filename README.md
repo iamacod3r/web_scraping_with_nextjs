@@ -16,7 +16,7 @@ This project is a simple web scraping application built with Next.js, MongoDB, a
 4. Start the application by running `npm run dev`.
 5. Access the application in your browser at `http://localhost:3000`.
 
-## Running the Project Locally
+## Running on Docker
 
 To run the project locally, follow these steps:
 
