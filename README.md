@@ -1,4 +1,4 @@
-# Project Name
+# Web Scraping with NextJs and MongoDB
 This project is a simple web scraping application built with Next.js, MongoDB, and Docker. It allows users to scrape data from websites and store it in a MongoDB database.
 
 ## Technologies Used
